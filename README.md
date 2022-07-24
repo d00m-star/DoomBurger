@@ -7,7 +7,8 @@ GA-SEI Project 2 - Doom Burger (Fast Food Site)
 ### By: John Dunn
 
 [Instagram](https://www.instagram.com/the_alch3mys7/) |
-[Facebook](https://www.facebook.com/chimp.slap/) | [Trello] (https://trello.com/b/MWH1MxIo/doomburger)
+[Facebook](https://www.facebook.com/chimp.slap/) |
+[Trello](https://trello.com/b/MWH1MxIo/doomburger)
 
 ---
 
@@ -39,8 +40,8 @@ Make your order from the menu page, and/or drop some feedback about the food!
 
 ## **_Diagrams_**
 
-[Front-End/Client] (https://app.diagrams.net/#LDoom%20Burger%20Front)
-[Back-End/ERD] (https://app.diagrams.net/?libs=general;er#LDoom%20Burger%20Data)
+[Front-End/Client](https://app.diagrams.net/#LDoom%20Burger%20Front) |
+[Back-End/ERD](https://app.diagrams.net/?libs=general;er#LDoom%20Burger%20Data)
 
 ---
 
