@@ -13,13 +13,18 @@ app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
 
+//Burger Routes
 app.get('/menu', burgerController.getAllBurgers)
 app.put('/menu/:id', burgerController.updateBurger)
 app.delete('/menu/:id', burgerController.deleteBurger)
 app.post('menu/:id', burgerController.setBurger)
 app.get('/menu/:id', burgerController.findBurger)
 
-//add routes for order
+//Order Routes
+// app.get('/menu', orderController.getOrder)
+// app.delete('/menu', orderController.deleteOrder)
+// app.post('/menu', orderController.updateOrder)
+// app.put('/menu', orderController.setOrder)
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)

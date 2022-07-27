@@ -1,10 +1,10 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Home from './components/Home'
+import Home from './pages/Home'
 import Header from './components/Header'
-import Menu from './components/Menu'
-import Review from './components/Review'
+import Menu from './pages/Menu'
+import Review from './pages/Review'
 import axios from 'axios'
 
 function App() {
@@ -37,9 +37,11 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu burgers={burgers} />} />
+          <Route
+            path="/menu"
+            element={<Menu burgers={burgers} order={order} />}
+          />
           <Route path="/review" element={<Review />} />
-          {/* <Route path="/order" element={<Order />} /> */}
         </Routes>
       </main>
     </div>
