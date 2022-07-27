@@ -8,7 +8,6 @@ const main = async () => {
     name: 'Order',
     orderArray: []
   })
-  order1.save()
 
   const burgers = [
     {
