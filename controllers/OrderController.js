@@ -1,7 +1,7 @@
 const { Order } = require('../models')
 
 const getOrder = async (req, res) => {
-  const order = await Order.find({})
+  const order = await Order.findOne({})
   res.json(order)
 }
 

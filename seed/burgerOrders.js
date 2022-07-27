@@ -1,5 +1,5 @@
 const db = require('../db')
-const { Burger, Order } = require('../models')
+const { Burger, Order, Review } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -15,17 +15,20 @@ const main = async () => {
       toppings: ['lettuce', 'onion', 'tomato', 'mayo', 'pickles', 'cheese'],
       protein: 'Beef',
       description:
-        'All American classic topped with lettuce, onion, tomato, pickles, american cheese, and slathered with mayonaisse',
-      order: order1._id
+        'All American classic topped with lettuce, onion, tomato, pickles, american cheese, and slathered with mayonaisse'
     },
     {
       name: "Dunn's Double Doom Burger",
       toppings: ['lettuce', 'onion', 'tomato', 'mayo', 'pickles', 'cheese'],
       protein: 'Double Beef',
-      description: 'Take the Doom Burger, Add Meat',
-      order: order1._id
+      description: 'Take the Doom Burger, Add Meat'
     }
   ]
+
+  const review = await new Review({
+    name: '',
+    thought: ''
+  })
 
   await Burger.insertMany(burgers)
   console.log('Created burgers!')
