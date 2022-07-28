@@ -19,12 +19,12 @@ app.put('/burgers/:id', burgerController.updateBurger)
 app.delete('/burgers/:id', burgerController.deleteBurger)
 app.post('/burgers', burgerController.createBurger)
 app.get('/burgers/:id', burgerController.findBurger)
-
+//Order Routes
 app.get('/order', orderController.getOrder)
 app.delete('/order/:id', orderController.deleteOrder)
 app.post('/order/', orderController.updateOrder)
 app.put('/order/:id', orderController.setOrder)
-
+//Admin Route
 app.get('/admin')
 
 app.listen(PORT, () => {

@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Admin = (props) => {
   const [burgers, setBurgers] = useState([])
-
+  //Deletes burgers/items by id, uses window.confirm to get a truthy/falsey
   const deleteBurger = async (id) => {
     const willDelete = window.confirm('Are you sure?')
     if (!willDelete) {
@@ -13,7 +13,7 @@ const Admin = (props) => {
     await axios.delete(`http://localhost:3001/burgers/${id}`)
     getBurgers()
   }
-
+  //Grabs Burgers
   const getBurgers = async () => {
     const res = await axios.get(`http://localhost:3001/burgers`)
     setBurgers(res.data)
@@ -21,7 +21,7 @@ const Admin = (props) => {
   useEffect(() => {
     getBurgers()
   }, [])
-
+  //Renders admin page with all burgers/items
   return (
     <div>
       <Link to="/admin/foods/add">Add</Link>

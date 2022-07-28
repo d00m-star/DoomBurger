@@ -1,3 +1,5 @@
+//Seeds
+
 const db = require('../db')
 const { Burger, Order, Review } = require('../models')
 

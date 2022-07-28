@@ -3,20 +3,20 @@ import OrderDetails from '../components/OrderDetails'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 
+//States
 const Menu = (props) => {
   const [burgers, setBurgers] = useState([])
   const [order, setOrder] = useState(null)
   const [burger, setBurger] = useState(null)
-
+  //grabs my burger data
   const getBurgers = async () => {
     const res = await axios.get(`http://localhost:3001/burgers`)
     setBurgers(res.data)
   }
-
+  //grabs order data
   const getOrder = async () => {
     const res = await axios.get(`http://localhost:3001/order`)
     setOrder(res.data)
-    console.log('get order..', res.data)
   }
 
   useEffect(() => {
@@ -26,14 +26,10 @@ const Menu = (props) => {
     getBurgers()
   }, [])
 
-  console.log(burger)
-
-  console.log(order)
-  console.log('About to Render')
+  //Renders Menu page with components
   return (
     <div className="menu-container">
       <div className="left-menu-item-list">
-        Left
         {burgers.map((burger) => (
           <div
             className="item-names"
@@ -45,10 +41,14 @@ const Menu = (props) => {
         ))}
       </div>
       <div className="middle-menu-item-info">
-        {burger && <BurgerDetails burger={burger} />}
+        <div className="burger-details">
+          {burger && <BurgerDetails burger={burger} />}
+        </div>
       </div>
       <div className="right-menu-order-info">
-        {order && <OrderDetails order={order} />}
+        <div className="order-details">
+          {order && <OrderDetails order={order} />}
+        </div>
       </div>
     </div>
   )

@@ -1,3 +1,5 @@
+//Exports Schemas for use elsewhere
+
 const mongoose = require('mongoose')
 const orderSchema = require('./Orders')
 const burgerSchema = require('./Burgers')

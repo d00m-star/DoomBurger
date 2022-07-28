@@ -1,14 +1,9 @@
+//Returns single burger info
+
 import { useState, useEffect } from 'react'
 
 const BurgerDetails = (props) => {
   
-const [showBurger, setShowBurger] = useState({})
-
-// const getBurger = (burger) => {
-//   setShowBurger(burger)
-// }
-
-
   return (
     <div className='burger-detail-component'>
       <div className="burger-info">
