@@ -22,6 +22,10 @@ const main = async () => {
       toppings: ['lettuce', 'onion', 'tomato', 'mayo', 'pickles', 'cheese'],
       protein: 'Double Beef',
       description: 'Take the Doom Burger, Add Meat'
+    },
+    {
+      name: 'Whiskey Drank',
+      description: 'Whiskey, in a drank'
     }
   ]
 
