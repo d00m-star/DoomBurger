@@ -42,7 +42,7 @@ header {
 }
 
 
-nav {
+.nav-links {
   background-color: rgb(21, 21, 21);
   color: white;
   text-align: center;
@@ -70,14 +70,13 @@ nav {
 
 .left-menu-item-list {
   border-right: 3px solid black;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 .middle-menu-item-info {
   color: black;
   display: flex;
   justify-content: center;
+  flex-direction: row
 }
 
 .right-menu-order-info {
@@ -85,10 +84,15 @@ nav {
 }
 .item-names {
   font-size: 15px;
-  height: 20px;
+  margin-bottom: 30px;
 }
 
 .menu-img {
   height: 200px;
   border-bottom-right-radius: 20px;
+}
+
+.burger-details {
+  display: flex;
+  justify-content: center;
 }

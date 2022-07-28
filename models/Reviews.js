@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const Review = new Schema(
   {
-    name: { type: String, required: true },
-    review: { type: Array, required: true }
+    name: { type: String, required: false },
+    review: { type: String, required: false }
   },
   { timestamps: true }
 )

@@ -10,6 +10,7 @@ const main = async () => {
     name: 'Order',
     orderArray: []
   })
+  order1.save()
 
   const burgers = [
     {
@@ -28,16 +29,17 @@ const main = async () => {
       description: 'Take the Doom Burger, Add Meat'
     },
     {
-      name: 'Whiskey Drank',
+      name: 'Whisky Drank',
       img: 'https://st2.depositphotos.com/1105977/6189/i/450/depositphotos_61890001-stock-photo-glasses-of-whiskey-on-black.jpg',
-      description: 'Whiskey, in a drank'
+      description: 'Whisky, mmmm'
     }
   ]
 
   const review = await new Review({
     name: '',
-    thought: ''
+    review: ''
   })
+  review.save()
 
   await Burger.insertMany(burgers)
   console.log('Created burgers!')

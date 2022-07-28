@@ -7,7 +7,10 @@ const OrderDetails = (props) => {
     <div className='order-container'>
       <div>
           <h4>{props.order.name}</h4>
-          <h4>{props.order.orderArray}</h4>
+          {/* {props.order.orderArray.map((i) => (
+            <h4>{i}</h4>
+          ))} */}
+          
       </div>
     </div>
   )

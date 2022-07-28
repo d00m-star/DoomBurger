@@ -13,6 +13,7 @@ const Admin = (props) => {
     await axios.delete(`http://localhost:3001/burgers/${id}`)
     getBurgers()
   }
+
   //Grabs Burgers
   const getBurgers = async () => {
     const res = await axios.get(`http://localhost:3001/burgers`)
@@ -21,17 +22,20 @@ const Admin = (props) => {
   useEffect(() => {
     getBurgers()
   }, [])
+
   //Renders admin page with all burgers/items
   return (
     <div>
-      <Link to="/admin/foods/add">Add</Link>
+      <Link to="/admin/foods/add">Add New Item</Link>
       {burgers.map((burger) => (
         <div key={burger._id}>
           <h1>{burger.name}</h1>
           <button type="button" onClick={() => deleteBurger(burger._id)}>
             Delete
           </button>
-          <Link to={`/admin/foods/${burger._id}/edit`}>Edit</Link>
+          <div className="edit-button">
+            <Link to={`/admin/foods/${burger._id}/edit`}>Edit</Link>
+          </div>
         </div>
       ))}
     </div>

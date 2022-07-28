@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className='header'>
       <h4>Doom Burger</h4>
-      <nav>
+      <nav className='nav-links'>
         <Link to='/'>Home</Link>
         <Link to='/menu'>Menu</Link>
         <Link to='/review'>Review</Link>

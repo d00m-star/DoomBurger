@@ -25,6 +25,7 @@ const EditFood = () => {
     getBurger()
   }, [])
 
+  //Rendered Form
   return (
     <div>
       <form onSubmit={handleSubmit} className="form-edit">

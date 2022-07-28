@@ -8,8 +8,9 @@ import { useState, useEffect } from 'react'
 //States
 const Menu = (props) => {
   const [burgers, setBurgers] = useState([])
-  const [order, setOrder] = useState(null)
+  const [order, setOrder] = useState({})
   const [burger, setBurger] = useState(null)
+
   //grabs my burger data
   const getBurgers = async () => {
     const res = await axios.get(`http://localhost:3001/burgers`)
