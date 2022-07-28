@@ -11,9 +11,9 @@ const findBurger = async (req, res) => {
   res.json(burger)
 }
 
-const setBurger = async (req, res) => {
-  const { id } = req.params
-  const burger = await Burger.findByIdAndUpdate(id)
+const createBurger = async (req, res) => {
+  const { name, description } = req.body
+  const burger = await Burger.create({ name, description })
   res.json(burger)
 }
 
@@ -25,7 +25,8 @@ const deleteBurger = async (req, res) => {
 
 const updateBurger = async (req, res) => {
   const { id } = req.params
-  const burger = await Burger.findByIdAndUpdate(id)
+  const { name, description } = req.body
+  const burger = await Burger.findByIdAndUpdate(id, { name, description })
   res.json(burger)
 }
 
@@ -33,6 +34,6 @@ module.exports = {
   getAllBurgers,
   updateBurger,
   deleteBurger,
-  setBurger,
+  createBurger,
   findBurger
 }

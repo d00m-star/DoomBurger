@@ -17,13 +17,15 @@ app.use(logger('dev'))
 app.get('/burgers', burgerController.getAllBurgers)
 app.put('/burgers/:id', burgerController.updateBurger)
 app.delete('/burgers/:id', burgerController.deleteBurger)
-app.post('/burgers', burgerController.setBurger)
+app.post('/burgers', burgerController.createBurger)
 app.get('/burgers/:id', burgerController.findBurger)
 
 app.get('/order', orderController.getOrder)
 app.delete('/order/:id', orderController.deleteOrder)
 app.post('/order/', orderController.updateOrder)
 app.put('/order/:id', orderController.setOrder)
+
+app.get('/admin')
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
