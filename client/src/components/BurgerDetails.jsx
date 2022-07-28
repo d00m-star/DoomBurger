@@ -9,7 +9,7 @@ const BurgerDetails = (props) => {
       <div className="burger-info">
             <div className="burger-description" key={props.burger._id}>
               <h1>{props.burger.name}</h1>
-              <img src={props.burger.img}/>
+              <img className='menu-img' src={props.burger.img}/>
               <h4>FREE</h4>
               <p>{props.burger.description}</p>
               

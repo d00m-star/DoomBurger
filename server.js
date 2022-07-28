@@ -23,7 +23,7 @@ app.get('/burgers/:id', burgerController.findBurger)
 app.get('/order', orderController.getOrder)
 app.delete('/order/:id', orderController.deleteOrder)
 app.post('/order/', orderController.updateOrder)
-app.put('/order/:id', orderController.setOrder)
+app.put('/order/:id', orderController.updateOrder)
 //Admin Route
 app.get('/admin')
 
