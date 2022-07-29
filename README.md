@@ -34,7 +34,8 @@ Doom Burger, home of the Doom Burger.
 
 ## **_Getting Started_**
 
-Make your order from the menu page, and/or drop some feedback about the food!
+- You can make your order from the menu page.
+- Type '/admin' to enter the adminstrator tools and update
 
 ---
 
@@ -47,13 +48,20 @@ Make your order from the menu page, and/or drop some feedback about the food!
 
 ## **_Screenshots_**
 
-Coming Soon.
+1. [Image](./doomburger1.png)
+
+---
+
+2. [Image](./doomburger2.png)
 
 ---
 
 ## **_Future Updates_**
 
-- [ ] something that works
+- [x] something that works
+- [ ] delete items from order
+- [ ] cleaner UI
+- [ ] review section
 
 ---
 
