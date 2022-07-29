@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const orderSchema = require('./orders')
 const burgerSchema = require('./burgers')
-const reviewSchema = require('./reviews')
+const reviewSchema = require('./Reviews')
 
 const Order = mongoose.model('Order', orderSchema)
 const Burger = mongoose.model('Burger', burgerSchema)
