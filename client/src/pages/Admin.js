@@ -25,7 +25,7 @@ const Admin = (props) => {
 
   //Renders admin page with all burgers/items
   return (
-    <div>
+    <div className="admin-items">
       <Link to="/admin/foods/add">Add New Item</Link>
       {burgers.map((burger) => (
         <div key={burger._id}>

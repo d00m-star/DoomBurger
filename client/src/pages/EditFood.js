@@ -1,3 +1,5 @@
+//https://developer.mozilla.org/en-US/docs/Web/API/FormData
+
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -5,6 +7,7 @@ import { useState, useEffect } from 'react'
 const EditFood = () => {
   const [burger, setBurger] = useState({})
   const { foodId } = useParams()
+
   //Grabs FormData and replaces with inputs, & takes you back to admin page
   const navigate = useNavigate()
   const handleSubmit = async (e) => {
@@ -15,6 +18,7 @@ const EditFood = () => {
     await axios.put(`http://localhost:3001/burgers/${foodId}`, data)
     navigate('/admin')
   }
+
   //Grabs burger by Id
   const getBurger = async () => {
     const res = await axios.get(`http://localhost:3001/burgers/${foodId}`)

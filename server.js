@@ -12,6 +12,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
+app.use(express.static(`${__dirname}/client/build`))
 
 //Burger Routes
 app.get('/burgers', burgerController.getAllBurgers)
@@ -22,11 +23,14 @@ app.get('/burgers/:id', burgerController.findBurger)
 //Order Routes
 app.get('/order', orderController.getOrder)
 app.delete('/order/:id', orderController.deleteOrder)
-app.post('/order/', orderController.updateOrder)
+app.post('/order', orderController.updateOrder)
 app.put('/order/:id', orderController.updateOrder)
 //Admin Route
 app.get('/admin')
 
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+})
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })

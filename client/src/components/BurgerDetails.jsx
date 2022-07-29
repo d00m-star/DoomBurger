@@ -1,9 +1,13 @@
 //Returns single burger info
-
 import { useState, useEffect } from 'react'
 
 const BurgerDetails = (props) => {
+  const [order, setOrder] = useState()
   
+  // const handleClick = () => {
+  //   await axios.post(`http://localhost:3001/order`)
+  // }
+
   return (
     <div className='burger-detail-component'>
       <div className="burger-info">
@@ -13,7 +17,7 @@ const BurgerDetails = (props) => {
               <h4>FREE</h4>
               <p>{props.burger.description}</p>
               
-              <button className="menu-button">Add to Order</button>
+              <button className="menu-button" onClick={()=> setOrder(order)}>Add to Order</button>
             </div>
           
       </div>
