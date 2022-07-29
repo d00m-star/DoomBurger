@@ -1,9 +1,9 @@
 //Exports Schemas for use elsewhere
 
 const mongoose = require('mongoose')
-const orderSchema = require('./Orders')
-const burgerSchema = require('./Burgers')
-const reviewSchema = require('./Reviews')
+const orderSchema = require('./orders')
+const burgerSchema = require('./burgers')
+const reviewSchema = require('./reviews')
 
 const Order = mongoose.model('Order', orderSchema)
 const Burger = mongoose.model('Burger', burgerSchema)
