@@ -6,15 +6,11 @@ const getOrder = async (req, res) => {
   res.json(order)
 }
 
-const setOrder = async (req, res) => {
-  const { id } = req.params
-  const order = await Order.findByIdAndUpdate(id)
-  res.json(order)
-}
-
 const updateOrder = async (req, res) => {
-  const { id } = req.params
-  const order = await Order.findByIdAndUpdate(id)
+  console.log(req.body)
+  const order = await Order.findOne({})
+  order.orderArray.push(req.body)
+  await Order.findByIdAndUpdate(order._id, order)
   res.json(order)
 }
 
@@ -27,6 +23,5 @@ const deleteOrder = async (req, res) => {
 module.exports = {
   getOrder,
   deleteOrder,
-  updateOrder,
-  setOrder
+  updateOrder
 }

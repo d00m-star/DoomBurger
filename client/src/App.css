@@ -51,6 +51,28 @@ header {
   margin: 10px;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+}
+
+.header-links {
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+  text-decoration: none
+}
+
+a:visited {
+  color: gray
+}
+
+a:hover {
+  color: aqua
+}
+
+a:active {
+  color: blue
 }
 
 .home-image-container {
@@ -96,4 +118,9 @@ header {
 .burger-details {
   display: flex;
   justify-content: center;
+}
+
+.admin-items {
+  display: flex;
+  flex-direction: column;
 }

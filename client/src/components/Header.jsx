@@ -5,9 +5,8 @@ const Header = () => {
     <div className='header'>
       <h4>Doom Burger</h4>
       <nav className='nav-links'>
-        <Link to='/'>Home</Link>
-        <Link to='/menu'>Menu</Link>
-        <Link to='/review'>Review</Link>
+        <Link className = 'header-links' to='/'>Home</Link>
+        <Link className = 'header-links'to='/menu'>Menu</Link>
       </nav>
     </div>
   )

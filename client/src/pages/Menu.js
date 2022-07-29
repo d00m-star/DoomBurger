@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 //States
 const Menu = (props) => {
   const [burgers, setBurgers] = useState([])
-  const [order, setOrder] = useState({})
+  const [order, setOrder] = useState([])
   const [burger, setBurger] = useState(null)
 
   //grabs my burger data
@@ -19,13 +19,11 @@ const Menu = (props) => {
   //grabs order data
   const getOrder = async () => {
     const res = await axios.get(`http://localhost:3001/order`)
-    setOrder(res.data)
+    setOrder(res.data.orderArray)
   }
 
   useEffect(() => {
     getOrder()
-  }, [])
-  useEffect(() => {
     getBurgers()
   }, [])
 
@@ -45,7 +43,9 @@ const Menu = (props) => {
       </div>
       <div className="middle-menu-item-info">
         <div className="burger-details">
-          {burger && <BurgerDetails burger={burger} />}
+          {burger && (
+            <BurgerDetails burger={burger} order={order} setOrder={setOrder} />
+          )}
         </div>
       </div>
       <div className="right-menu-order-info">
